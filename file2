@@ -1,89 +1,159 @@
-✅ A) Setup
-git --version → Check Git version
-git config --global user.name → Set username
-git config --global user.email → Set email
-✅ B) Create Repo
-git init → Create new repo
-git clone URL → Copy repo
-✅ C) Status
-git status → Check file state
-✅ D) Add Files
-git add file → Stage file
-git add . → Stage all files
-✅ E) Commit
-git commit -m "msg" → Save changes
-git commit --amend → Edit last commit
-✅ F) History
-git log → Full history
-git log --oneline → Short history
-✅ G) Branch
-git branch → List branches
-git branch name → Create branch
-git checkout name → Switch branch
-git checkout -b name → Create + switch
-✅ H) Merge
-git merge branch → Merge branch
-✅ I) Remote
-git remote add origin URL → Connect repo
-git push → Upload code
-git pull → Download + merge
-git fetch → Download only
-✅ J) Undo
-git restore file → Discard changes
-git reset --hard → Delete changes
-git revert id → Undo commit safely
-✅ K) Stash
-git stash → Save temp work
-git stash pop → Restore work
-✅ L) Tag
-git tag v1.0 → Create version
-git push origin v1.0 → Push tag
-  
-Git Case Studies – Commands (Short Format)
-✅ Case Study 1: New Project Version Control Setup
-git init → Create repository
-git add file.py → Stage file
-git commit -m "msg" → Save project
-✅ Case Study 2: Tracking Daily Code Changes
-git status → Check state
-git diff → View changes
-git add file.py → Stage
-git commit -m "msg" → Save
-git log → View history
-✅ Case Study 3: Feature Development Using Branches
-git branch name → Create branch
-git checkout name → Switch branch
-git add . → Stage all
-git commit -m "msg" → Save
-git checkout main → Switch back
-✅ Case Study 4: Merging Feature into Main Code
-git checkout main → Go to main
-git merge branch → Merge branch
-git status → Verify
-✅ Case Study 5: Working with Remote Repository
-git remote add origin URL → Link remote
-git branch -M main → Set main branch
-git push -u origin main → Push code
-✅ Case Study 6: Undoing Mistakes
-git diff → View changes
-git restore file → Discard changes
-✅ Case Study 7: Handling Merge Conflicts
-git merge branch → Merge
-git status → Check conflicts
-git add file → Mark resolved
-git commit -m "msg" → Save
-✅ Case Study 8: Ignoring Unwanted Files
-touch .gitignore → Create file
-Add patterns → Ignore files
-git add .gitignore → Stage
-git commit -m "msg" → Save
-✅ Case Study 9: Collaborating with Team
-git fetch → Download changes
-git pull → Update project
-git status → Check issues
-✅ Case Study 10: Final Project Release
-git log → Review history
-git push → Upload code
-git tag v1.0 → Create version
-git push origin v1.0 → Push tag
+JENKINS – Case Studies with Codes
+✅ Case Study 1: Basic Jenkins Setup & Job Execution
+Where to write code:
+👉 In Freestyle Job → Build → Execute Windows batch command
 
+Code:
+echo Hello Jenkins
+  
+Steps:
+Create Freestyle Job
+Add build step → Execute Windows batch command
+Paste code → Save → Build Now
+  
+✅ Case Study 2: Jenkins with GitHub Integration
+Where to add code:
+👉 Freestyle Job → Source Code Management → Git
+👉 Build → Execute Windows batch command
+
+Code:
+
+echo Building Project
+
+Steps:
+Add GitHub repo URL in SCM
+Add build step and paste code
+Enable trigger (Poll SCM or Webhook)
+  
+✅ Case Study 3: Job Chaining
+Where to configure:
+👉 Job → Post-build Actions
+  
+No coding required, only setting:
+
+Steps:
+
+In Job-A → Add “Build other projects”
+Enter: Job-B
+In Job-B → Trigger Job-C
+  
+✅ Case Study 4: Jenkins Pipeline (Basic)
+Where to write code:
+👉 Pipeline Job → Pipeline Script
+
+Code:
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build Stage'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test Stage'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy Stage'
+            }
+        }
+    }
+}
+
+✅ Case Study 5: Pipeline as Code (Jenkinsfile)
+Where to write code:
+👉 Create file in project → Jenkinsfile
+
+Code (same as pipeline):
+  pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
+            }
+        }
+    }
+}
+Then:
+Push to GitHub
+In Jenkins → Pipeline → Select Pipeline script from SCM
+
+✅ Case Study 6: Real CI/CD Pipeline
+Where to write code:
+👉 Pipeline Job or Jenkinsfile
+
+Sample Code:
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building app'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying app'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+    }
+}
+
+✅ Case Study 7: Jenkins Administration
+Where to configure:
+👉 Jenkins Dashboard → Manage Jenkins
+
+No coding, only settings:
+
+Manage Users
+Manage Nodes
+Install Plugins
+Configure Security
+
+
+
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+n = int(input("Enter number of terms: "))
+for i in range(n):
+    print(fibonacci(i), end=" ")
+
+
+n = int(input("Enter a number: "))
+if n < 0:
+    print("Factorial is not defined for negative numbers")
+else:
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    print(f"Factorial of {n} = {fact}")
