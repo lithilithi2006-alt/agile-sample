@@ -1,0 +1,90 @@
+✅ A) Setup
+git --version → Check Git version
+git config --global user.name → Set username
+git config --global user.email → Set email
+✅ B) Create Repo
+git init → Create new repo
+git clone URL → Copy repo
+✅ C) Status
+git status → Check file state
+✅ D) Add Files
+git add file → Stage file
+git add . → Stage all files
+✅ E) Commit
+git commit -m "msg" → Save changes
+git commit --amend → Edit last commit
+✅ F) History
+git log → Full history
+git log --oneline → Short history
+✅ G) Branch
+git branch → List branches
+git branch name → Create branch
+git checkout name → Switch branch
+git checkout -b name → Create + switch
+✅ H) Merge
+git merge branch → Merge branch
+✅ I) Remote
+git remote add origin URL → Connect repo
+git push → Upload code
+git pull → Download + merge
+git fetch → Download only
+✅ J) Undo
+git restore file → Discard changes
+git reset --hard → Delete changes
+git revert id → Undo commit safely
+✅ K) Stash
+git stash → Save temp work
+git stash pop → Restore work
+✅ L) Tag
+git tag v1.0 → Create version
+git push origin v1.0 → Push tag
+  
+Git Case Studies – Commands (Short Format)
+✅ Case Study 1: New Project Version Control Setup
+git init → Create repository
+git add file.py → Stage file
+git commit -m "msg" → Save project
+✅ Case Study 2: Tracking Daily Code Changes
+git status → Check state
+git diff → View changes
+git add file.py → Stage
+git commit -m "msg" → Save
+git log → View history
+✅ Case Study 3: Feature Development Using Branches
+git branch name → Create branch
+git checkout name → Switch branch
+git add . → Stage all
+git commit -m "msg" → Save
+git checkout main → Switch back
+✅ Case Study 4: Merging Feature into Main Code
+git checkout main → Go to main
+git merge branch → Merge branch
+git status → Verify
+✅ Case Study 5: Working with Remote Repository
+git remote add origin URL → Link remote
+git branch -M main → Set main branch
+git push -u origin main → Push code
+✅ Case Study 6: Undoing Mistakes
+git diff → View changes
+git restore file → Discard changes
+✅ Case Study 7: Handling Merge Conflicts
+git merge branch → Merge
+git status → Check conflicts
+git add file → Mark resolved
+git commit -m "msg" → Save
+✅ Case Study 8: Ignoring Unwanted Files
+touch .gitignore → Create file
+Add patterns → Ignore files
+git add .gitignore → Stage
+git commit -m "msg" → Save
+✅ Case Study 9: Collaborating with Team
+git fetch → Download changes
+git pull → Update project
+git status → Check issues
+✅ Case Study 10: Final Project Release
+git log → Review history
+git push → Upload code
+git tag v1.0 → Create version
+git push origin v1.0 → Push tag
+
+
